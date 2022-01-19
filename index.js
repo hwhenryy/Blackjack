@@ -32,8 +32,8 @@ function startGame() {
     }
 
     messageEl.textContent = message;
-    cardsEl.textContent = cards;
-    sumEl.textContent = sum;
+    cardsEl.textContent = "Cards: " + cards;
+    sumEl.textContent = "Sum: " + sum;
 
 }
 
