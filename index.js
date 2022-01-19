@@ -4,11 +4,17 @@
 
 let firstCard = 2;
 let secondCard = 19;
+let cards = firstCard + ", " + secondCard
+
 let hasBlackjack = false;
 let isAlive = true;
-messageEl = document.getElementById("message-el");
 let message = ""
 let sum = firstCard + secondCard
+
+let messageEl = document.getElementById("message-el");
+let cardsEl = document.getElementById("cards-el");
+let sumEl = document.getElementById("sum-el");
+
 
 function startGame() {
 
@@ -24,7 +30,11 @@ function startGame() {
         isAlive = false;
 
     }
+
     messageEl.textContent = message;
+    cardsEl.textContent = cards;
+    sumEl.textContent = sum;
+
 }
 
 
