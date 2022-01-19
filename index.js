@@ -3,7 +3,7 @@
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
 
-let playerObject = {
+let player = {
     name: "Yumeko",
     chips: 1
 }
@@ -25,7 +25,7 @@ playerEl.textContent = player.name + ": $" + player.chips;
 
 function getRandomCard() {
 
-    let randomNumber = Math.floor(Math.random())*13 + 1
+    let randomNumber = Math.floor(Math.random()*13) + 1
     if (randomNumber > 10) {
         randomNumber = 10;
         
@@ -41,6 +41,7 @@ function startGame() {
     let firstCard = getRandomCard();
     let secondCard = getRandomCard();
     Cards = [firstCard, secondCard]
+    sum = firstCard + secondCard;
     isAlive = true;
 
     renderGame();
