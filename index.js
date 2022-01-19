@@ -6,6 +6,7 @@ let firstCard = 2;
 let secondCard = 19;
 let hasBlackjack = false;
 let isAlive = true;
+messageEl = document.getElementById("message-el");
 let message = ""
 let sum = firstCard + secondCard
 
@@ -23,6 +24,7 @@ function startGame() {
         isAlive = false;
 
     }
+    messageEl.textContent = message;
 }
 
-console.log(message);
+
