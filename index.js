@@ -2,6 +2,7 @@
 // Set their values to a random number between 2-11
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
+let gameStart = false;
 let firstCard = 2;
 let secondCard = 19;
 let cards = firstCard + ", " + secondCard
@@ -14,6 +15,7 @@ let sum = firstCard + secondCard
 let messageEl = document.getElementById("message-el");
 let cardsEl = document.getElementById("cards-el");
 let sumEl = document.getElementById("sum-el");
+let newEl = document.getElementById("new-el");
 
 
 function startGame() {
@@ -34,7 +36,18 @@ function startGame() {
     messageEl.textContent = message;
     cardsEl.textContent = "Cards: " + cards;
     sumEl.textContent = "Sum: " + sum;
+    gameStart = true;
 
 }
 
+function newCard() {
 
+    if (gameStart == true) {
+        newCard = 5;
+        sum = sum += newCard;
+        startGame();
+
+    } else {
+
+    }
+}
