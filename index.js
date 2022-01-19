@@ -3,18 +3,29 @@
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
 
+let playerObject = {
+    name: "Yumeko",
+    chips: 1
+}
+
+let Cards = [];
+let sum = 0;
 let hasBlackjack = false;
 let message = ""
-let sum = firstCard + secondCard
+let isAlive = false;
+
 
 let messageEl = document.getElementById("message-el");
 let cardsEl = document.getElementById("cards-el");
 let sumEl = document.getElementById("sum-el");
 let newEl = document.getElementById("new-el");
+let playerEl = document.getElementById("player-el")
+
+playerEl.textContent = player.name + ": $" + player.chips;
 
 function getRandomCard() {
 
-    randomNumber = Math.floor(Math.random())*13 + 1
+    let randomNumber = Math.floor(Math.random())*13 + 1
     if (randomNumber > 10) {
         randomNumber = 10;
         
@@ -29,9 +40,8 @@ function getRandomCard() {
 function startGame() {
     let firstCard = getRandomCard();
     let secondCard = getRandomCard();
-    let Cards = [firstCard, secondCard]
-    let isAlive = true;
-
+    Cards = [firstCard, secondCard]
+    isAlive = true;
 
     renderGame();
 }
@@ -52,12 +62,15 @@ function renderGame() {
     }
 
     messageEl.textContent = message;
+    sumEl.textContent = "Sum: " + sum;
+
     cardsEl.textContent = "Cards: "
     for (var i = 0; i < Cards.length; i++) {
     cardsEl.textContent += Cards[i] + " ";
     }
-    sumEl.textContent = "Sum: " + sum;
-    gameStart = true;
+
+    
+    
 
 }
 
