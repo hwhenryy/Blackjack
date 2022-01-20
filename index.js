@@ -43,6 +43,8 @@ function startGame() {
     Cards = [firstCard, secondCard]
     sum = firstCard + secondCard;
     isAlive = true;
+    
+    hasBlackjack = false;
 
     renderGame();
 }
